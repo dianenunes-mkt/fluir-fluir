@@ -8,99 +8,105 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* FLUIR Brand Colors */
-    --background: 42 35% 96%; /* Off-White Neutro #F5F3ED */
-    --foreground: 217 68% 5%; /* Azul Escuro Principal #050C1A */
+    /* FLUIR Brand Colors - HSL exatos da paleta */
 
-    --card: 42 35% 96%;
-    --card-foreground: 217 68% 5%;
+    /* Fundo principal da página - Off-White Neutro #F5F3ED */
+    --background: 45 29% 95%;
+    --foreground: 220 68% 6%; /* Azul Profundo #050C1A */
 
-    --popover: 42 35% 96%;
-    --popover-foreground: 217 68% 5%;
+    --card: 45 29% 95%;
+    --card-foreground: 220 68% 6%;
 
-    --primary: 217 68% 5%; /* Azul Profundo #050C1A */
-    --primary-foreground: 42 35% 96%;
+    --popover: 45 29% 95%;
+    --popover-foreground: 220 68% 6%;
 
-    --secondary: 209 12% 77%; /* Prata #BFC5CC */
-    --secondary-foreground: 217 68% 5%;
+    /* Azul Profundo - usado só em blocos estratégicos */
+    --primary: 220 68% 6%;
+    --primary-foreground: 45 29% 95%;
 
-    --muted: 39 23% 82%; /* Cinza Claro Neutro #D7D1C5 */
-    --muted-foreground: 30 5% 29%; /* Cinza Grafite Elegante #4E4B45 */
+    /* Prata #BFC5CC */
+    --secondary: 212 11% 77%;
+    --secondary-foreground: 220 68% 6%;
 
-    --accent: 228 96% 21%; /* Azul Suporte #02236B */
-    --accent-foreground: 42 35% 96%;
+    /* Cinza Claro #D7D1C5 */
+    --muted: 40 18% 81%;
+    /* Cinza Grafite #4E4B45 */
+    --muted-foreground: 40 6% 29%;
+
+    /* Azul Suporte #02236B */
+    --accent: 221 96% 21%;
+    --accent-foreground: 45 29% 95%;
     
-    --pastel: 209 31% 71%; /* Azul Acinzentado Pastel #A4B6C5 */
+    /* Azul Acinzentado Pastel #A4B6C5 */
+    --pastel: 207 22% 71%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 42 35% 96%;
+    --destructive-foreground: 45 29% 95%;
 
-    --border: 39 23% 82%;
-    --input: 39 23% 82%;
-    --ring: 217 68% 5%;
+    --border: 40 18% 81%;
+    --input: 40 18% 81%;
+    --ring: 220 68% 6%;
 
     --radius: 0.75rem;
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (mantida, mas seguindo a mesma lógica neutra) */
+    --sidebar-background: 45 29% 95%;
+    --sidebar-foreground: 220 68% 6%;
+    --sidebar-primary: 221 96% 21%;
+    --sidebar-primary-foreground: 45 29% 95%;
+    --sidebar-accent: 40 18% 81%;
+    --sidebar-accent-foreground: 220 68% 6%;
+    --sidebar-border: 40 18% 81%;
+    --sidebar-ring: 207 22% 71%;
   }
 
+  /* "Dark" aqui NÃO muda o fundo: continua off-white.
+     Se no futuro você não quiser dark mode, pode até remover esse bloco. */
   .dark {
-    --background: 217 68% 5%;
-    --foreground: 42 35% 96%;
+    --background: 45 29% 95%;
+    --foreground: 220 68% 6%;
 
-    --card: 217 68% 5%;
-    --card-foreground: 42 35% 96%;
+    --card: 45 29% 95%;
+    --card-foreground: 220 68% 6%;
 
-    --popover: 217 68% 5%;
-    --popover-foreground: 42 35% 96%;
+    --popover: 45 29% 95%;
+    --popover-foreground: 220 68% 6%;
 
-    --primary: 42 35% 96%;
-    --primary-foreground: 217 68% 5%;
+    --primary: 220 68% 6%;
+    --primary-foreground: 45 29% 95%;
 
-    --secondary: 209 12% 77%; /* Prata */
-    --secondary-foreground: 42 35% 96%;
+    --secondary: 212 11% 77%;
+    --secondary-foreground: 220 68% 6%;
 
-    --muted: 30 5% 29%;
-    --muted-foreground: 209 31% 71%;
+    --muted: 40 18% 81%;
+    --muted-foreground: 40 6% 29%;
 
-    --accent: 228 96% 21%;
-    --accent-foreground: 42 35% 96%;
+    --accent: 221 96% 21%;
+    --accent-foreground: 45 29% 95%;
     
-    --pastel: 209 31% 71%;
+    --pastel: 207 22% 71%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 42 35% 96%;
+    --destructive-foreground: 45 29% 95%;
 
-    --border: 30 5% 29%;
-    --input: 30 5% 29%;
-    --ring: 209 31% 71%;
-    --sidebar-background: 217 68% 5%;
-    --sidebar-foreground: 42 35% 96%;
-    --sidebar-primary: 228 96% 21%;
-    --sidebar-primary-foreground: 42 35% 96%;
-    --sidebar-accent: 30 5% 29%;
-    --sidebar-accent-foreground: 42 35% 96%;
-    --sidebar-border: 30 5% 29%;
-    --sidebar-ring: 209 31% 71%;
+    --border: 40 18% 81%;
+    --input: 40 18% 81%;
+    --ring: 207 22% 71%;
+
+    --sidebar-background: 45 29% 95%;
+    --sidebar-foreground: 220 68% 6%;
+    --sidebar-primary: 221 96% 21%;
+    --sidebar-primary-foreground: 45 29% 95%;
+    --sidebar-accent: 40 18% 81%;
+    --sidebar-accent-foreground: 220 68% 6%;
+    --sidebar-border: 40 18% 81%;
+    --sidebar-ring: 207 22% 71%;
   }
 }
+
 
 @layer base {
   * {
