@@ -9,7 +9,7 @@ const testimonials = [
   {
     text: "Meu atendimento ficou muito mais leve, rápido e profissional.",
     author: "João Santos",
-    role: "Gestor de Tráfego",
+    role: "Gestor",
   },
   {
     text: "Minha rotina ficou mais leve. O FLUIR colocou ordem onde antes era confusão.",
