@@ -6,12 +6,13 @@ import { VideoPlaceholder } from "@/components/VideoPlaceholder";
 export const Hero = () => {
   return (
     <section className="w-full">
+
       {/* ==============================
           FAIXA SUPERIOR — Azul Profundo
       =============================== */}
       <div className="w-full bg-[#050C1A] px-6 py-20 text-[#F5F3ED]">
         <div className="container mx-auto max-w-6xl text-center space-y-8 animate-fade-in">
-          
+
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img
@@ -35,19 +36,19 @@ export const Hero = () => {
       </div>
 
       {/* ==============================
-          FAIXA INFERIOR — Off-White
+          FAIXA INFERIOR — Off-White Correto (bg-background)
       =============================== */}
-      <div className="w-full bg-[#F5F3ED] px-6 py-20">
+      <div className="w-full bg-background px-6 py-20">
         <div className="container mx-auto max-w-6xl text-center">
 
           {/* Phone + Vídeo */}
           <div className="flex justify-center py-8">
             <div className="relative w-64 md:w-80 aspect-[9/19] bg-[#050C1A] rounded-[3rem] p-2 shadow-2xl">
-              
+
               {/* Notch */}
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-[#050C1A] rounded-full" />
 
-              {/* Tela */}
+              {/* Tela — agora usando o mesmo background do ESSENCIAL */}
               <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden flex items-center justify-center">
                 <div className="w-[85%] mx-auto pt-2">
                   <VideoPlaceholder
@@ -57,12 +58,13 @@ export const Hero = () => {
                   />
                 </div>
               </div>
+
             </div>
           </div>
 
           {/* Botões */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            
+
             {/* Botão principal */}
             <Button
               size="lg"
@@ -81,10 +83,12 @@ export const Hero = () => {
               <Search className="mr-2 h-5 w-5" />
               Entender como funciona
             </Button>
+
           </div>
 
         </div>
       </div>
+
     </section>
   );
 };
