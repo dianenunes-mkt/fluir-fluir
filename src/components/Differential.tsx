@@ -38,9 +38,13 @@ export const Differential = () => {
               {notItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-4 bg-[#02236B]/30 rounded-xl border border-[#A4B6C5]/30"
+                  className="flex items-start gap-4 p-4 rounded-xl border border-[#2F455A]/40"
+                  style={{ backgroundColor: "#2F455A20" }} // Azul suporte translúcido
                 >
-                  <X className="h-6 w-6 text-[#A4B6C5] flex-shrink-0 mt-1" />
+                  <X
+                    className="h-6 w-6 flex-shrink-0 mt-1"
+                    style={{ color: "#2F455A" }} // Azul Suporte no ícone
+                  />
                   <span className="text-lg">{item}</span>
                 </div>
               ))}
@@ -53,9 +57,13 @@ export const Differential = () => {
               {yesItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-4 bg-[#02236B]/30 rounded-xl border border-[#A4B6C5]/30"
+                  className="flex items-start gap-4 p-4 rounded-xl border border-[#2F455A]/40"
+                  style={{ backgroundColor: "#2F455A20" }} // Azul suporte translúcido
                 >
-                  <Check className="h-6 w-6 text-[#A4B6C5] flex-shrink-0 mt-1" />
+                  <Check
+                    className="h-6 w-6 flex-shrink-0 mt-1"
+                    style={{ color: "#2F455A" }} // Azul Suporte no ícone
+                  />
                   <span className="text-lg">{item}</span>
                 </div>
               ))}

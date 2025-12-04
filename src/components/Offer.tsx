@@ -45,9 +45,13 @@ export const Offer = () => {
         <div className="text-center animate-slide-up">
           <Button 
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-8 rounded-full transition-all hover:scale-105 shadow-2xl"
+            className="text-[#F5F3ED] text-xl px-12 py-8 rounded-full transition-all hover:scale-105 shadow-2xl"
+            style={{
+              backgroundColor: "#050C1A",     // Azul Profundo
+              borderColor: "#050C1A",
+            }}
           >
-            <Flame className="mr-2 h-6 w-6" />
+            <Flame className="mr-2 h-6 w-6 text-[#F5F3ED]" />
             Quero ativar o FLUIR agora
           </Button>
         </div>
@@ -55,3 +59,5 @@ export const Offer = () => {
     </section>
   );
 };
+
+export default Offer;

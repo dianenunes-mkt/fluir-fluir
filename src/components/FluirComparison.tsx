@@ -38,27 +38,29 @@ export const FluirComparison = () => {
   return (
     <section className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
+
         {/* Título */}
         <div className="text-center space-y-6 mb-16 animate-slide-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
             FLUIR x Chatbots x SDR: o que realmente faz diferença?
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Por que o FLUIR substitui (ou reduz drasticamente) a necessidade de
-            SDRs?
+            Por que o FLUIR substitui (ou reduz drasticamente) a necessidade de SDRs?
           </p>
         </div>
 
         {/* Comparação principal */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
+
           {/* FLUIR Column – bloco escuro (Azul Profundo) */}
           <div className="rounded-3xl p-8 md:p-10 animate-slide-up shadow-lg bg-primary text-primary-foreground border border-border/40">
             <div className="flex items-center gap-3 mb-6">
               <Zap className="h-8 w-8 text-secondary" />
               <h3 className="text-2xl md:text-3xl font-display font-bold">
-                FLUIR → Automação Inteligente 24/7
+                FLUIR → Automação Inteligente (24 horas por dia, 7 dias por semana)
               </h3>
             </div>
+
             <div className="space-y-3">
               {fluirBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
@@ -69,19 +71,23 @@ export const FluirComparison = () => {
             </div>
           </div>
 
-          {/* Traditional Column – bloco claro */}
-          <div className="bg-card border border-border/60 rounded-3xl p-8 md:p-10 animate-slide-up shadow-sm">
+          {/* Traditional Column – Fundo Azul Suporte #2F455A */}
+          <div
+            className="rounded-3xl p-8 md:p-10 animate-slide-up shadow-lg border border-[#3A566C]"
+            style={{ backgroundColor: "#2F455A" }}
+          >
             <div className="flex items-center gap-3 mb-6">
-              <Users className="h-8 w-8 text-muted-foreground" />
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+              <Users className="h-8 w-8 text-[#F0F4F8]" />
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-[#F5F5F5]">
                 Atendimento Humano / SDR → Modelo Tradicional
               </h3>
             </div>
+
             <div className="space-y-3">
               {traditionalDrawbacks.map((drawback, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <X className="h-5 w-5 text-destructive flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground leading-relaxed">
+                  <X className="h-5 w-5 text-[#FFB8B8] flex-shrink-0 mt-1" />
+                  <span className="text-lg leading-relaxed text-[#F5F5F5]">
                     {drawback}
                   </span>
                 </div>
@@ -90,32 +96,27 @@ export const FluirComparison = () => {
           </div>
         </div>
 
-        {/* Resultado Final – bloco escuro, sem gradiente */}
+        {/* Resultado Final */}
         <div className="rounded-[2.5rem] p-8 md:p-12 animate-slide-up shadow-lg bg-primary text-primary-foreground">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 mb-3">
-              {/* bolinha com azul suporte (#02236B) */}
-              <span className="w-4 h-4 rounded-sm bg-accent" />
+             {/* <span className="w-4 h-4 rounded-sm bg-accent" />
               <h3 className="text-2xl md:text-3xl font-display font-bold">
                 Resultado Final
-              </h3>
+              </h3>*/}
             </div>
 
             <p className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto">
-              O FLUIR não elimina o SDR onde ele é essencial —
-              <br />
+              O FLUIR não elimina o SDR onde ele é essencial — <br />
               <span className="font-semibold">
-                mas elimina 90% do trabalho repetitivo que consome o tempo do
-                SDR.
+                mas elimina 90% do trabalho repetitivo que consome o tempo do SDR.
               </span>
             </p>
           </div>
 
-          <p className="text-lg text-center mb-6 opacity-90">
-            Isso significa:
-          </p>
+          <p className="text-lg text-center mb-6 opacity-90">Isso significa:</p>
 
-          {/* Cards claros com texto escuro (sem azul claro) */}
+          {/* Cards claros */}
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
             {results.map((result, index) => (
               <div
@@ -135,11 +136,11 @@ export const FluirComparison = () => {
               👉 FLUIR funciona como seu primeiro atendente,
             </p>
             <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-              que entrega apenas os leads quentes e prontos para você ou sua
-              equipe.
+              que entrega apenas os leads quentes e prontos para você ou sua equipe.
             </p>
           </div>
         </div>
+
       </div>
     </section>
   );

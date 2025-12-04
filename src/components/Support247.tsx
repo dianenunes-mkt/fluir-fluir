@@ -19,7 +19,8 @@ export const Support247 = () => {
           {/* Ícone no topo */}
           <div className="flex justify-center mb-4">
             <div className="bg-accent/10 p-6 rounded-full">
-              <Moon className="h-16 w-16 text-accent" />
+              {/* Ícone principal agora em azul profundo */}
+              <Moon className="h-16 w-16" style={{ color: "#050C1A" }} />
             </div>
           </div>
 
@@ -45,7 +46,11 @@ export const Support247 = () => {
                   key={index}
                   className="flex items-center gap-4 p-4 bg-card rounded-xl border border-primary/10"
                 >
-                  <feature.icon className="h-6 w-6 text-accent flex-shrink-0" />
+                  {/* Ícones da lista agora em Azul Profundo */}
+                  <feature.icon
+                    className="h-6 w-6 flex-shrink-0"
+                    style={{ color: "#050C1A" }}
+                  />
                   <span className="text-lg md:text-xl">{feature.text}</span>
                 </div>
               ))}

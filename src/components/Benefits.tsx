@@ -32,18 +32,22 @@ export const Benefits = () => {
                 key={index}
                 className="
                   flex items-start gap-4 p-6
-                  bg-[#0B1739]              /* azul EXATO dos cards acima */
-                  text-[#F5F3ED]
                   rounded-2xl border border-white/10
                   transition-all hover:shadow-lg hover:border-white/20
                   animate-slide-up
                 "
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                  backgroundColor: "#2F455A", // Azul Suporte
+                }}
               >
                 <CheckCircle2
-                  className="h-7 w-7 text-[#BFC5CC] flex-shrink-0 mt-1"
+                  className="h-7 w-7 flex-shrink-0 mt-1"
+                  style={{
+                    color: "#050C1A", // Azul Profundo no bullet
+                  }}
                 />
-                <span className="text-lg md:text-xl leading-relaxed">
+                <span className="text-lg md:text-xl leading-relaxed text-[#F5F3ED]">
                   {benefit}
                 </span>
               </div>
@@ -55,3 +59,5 @@ export const Benefits = () => {
     </section>
   );
 };
+
+export default Benefits;

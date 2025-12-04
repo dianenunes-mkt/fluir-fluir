@@ -57,7 +57,7 @@ export const Hero = () => {
             {/* Botão principal — Azul Suporte */}
             <Button
               size="lg"
-              className="bg-[#02236B] hover:bg-[#02236B]/90 text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
+              className="bg-[#050C1A] hover:bg-[#02236B]/90 text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
             >
               <ArrowRight className="mr-2 h-5 w-5" />
               Quero ativar o FLUIR
