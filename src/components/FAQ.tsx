@@ -24,35 +24,42 @@ const faqs = [
   },
   {
     question: "Preciso de algum sistema adicional?",
-    answer: "Sim. O FLUIR utiliza uma plataforma de chatbot para executar os fluxos. Nós recomendamos uma ferramenta simples e eficiente, mas você pode usar qualquer plataforma de chatbot compatível com automações de WhatsApp.",
+    answer:
+      "Sim. O FLUIR utiliza uma plataforma de chatbot para executar os fluxos. Nós recomendamos uma ferramenta simples e eficiente, mas você pode usar qualquer plataforma de chatbot compatível com automações de WhatsApp.",
   },
   {
     question: "O FLUIR é um CRM? Ele funciona com CRM?",
-    answer: "O FLUIR não é um CRM. Ele é um serviço de qualificação automática de leads + atendimento inteligente via WhatsApp. Porém, se você já utiliza um CRM (ou deseja usar), o FLUIR pode ser integrado: via integração nativa, via API, ou utilizando o CRM recomendado por nós. Isso permite que o FLUIR organize seus leads dentro da sua estrutura atual — ou que você evolua para um CRM completo quando desejar.",
+    answer:
+      "O FLUIR não é um CRM. Ele é um serviço de qualificação automática de leads + atendimento inteligente via WhatsApp. Porém, se você já utiliza um CRM (ou deseja usar), o FLUIR pode ser integrado via API, integração nativa ou com o CRM recomendado por nós.",
   },
 ];
 
 export const FAQ = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-secondary/10 to-background">
+    <section className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center space-y-6 mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground">
             Perguntas Frequentes
           </h2>
         </div>
-        
-        <Accordion type="single" collapsible className="space-y-4 animate-slide-up">
+
+        <Accordion
+          type="single"
+          collapsible
+          className="space-y-4 animate-slide-up"
+        >
           {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
+            <AccordionItem
+              key={index}
               value={`item-${index}`}
-              className="bg-card border border-border/50 rounded-2xl px-6 hover:border-accent/50 transition-colors"
+              className="bg-card border border-border rounded-2xl px-6 transition-all"
             >
-              <AccordionTrigger className="text-lg md:text-xl font-semibold text-left hover:no-underline py-6">
+              <AccordionTrigger className="text-lg md:text-xl font-semibold text-left py-6 hover:no-underline hover:text-accent/60">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-lg text-muted-foreground pb-6">
+
+              <AccordionContent className="text-lg text-muted-foreground pb-6 bg-pastel/10 rounded-xl px-4 mt-2">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

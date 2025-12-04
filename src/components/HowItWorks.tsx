@@ -23,14 +23,16 @@ const steps = [
     number: "3",
     icon: Send,
     title: "O FLUIR direciona",
-    description: "O sistema envia o lead ao seu WhatsApp com segurança, evitando conflitos de conexão e deixando tudo organizado desde o primeiro contato.",
+    description:
+      "O sistema envia o lead ao seu WhatsApp com segurança, evitando conflitos de conexão e deixando tudo organizado desde o primeiro contato.",
   },
 ];
 
 export const HowItWorks = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-background to-secondary/10">
+    <section className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
+        {/* Título */}
         <div className="text-center space-y-6 mb-20 animate-slide-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground">
             Como Funciona
@@ -39,21 +41,24 @@ export const HowItWorks = () => {
             Simples, direto e eficiente
           </p>
         </div>
-        
+
+        {/* Steps */}
         <div className="space-y-16">
           {steps.map((step, index) => (
-            <div 
+            <div
               key={index}
               className="relative animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Ícone */}
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-full bg-accent flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-accent flex items-center justify-center shadow-md">
                     <step.icon className="h-10 w-10 text-accent-foreground" />
                   </div>
                 </div>
-                
+
+                {/* Conteúdo */}
                 <div className="flex-1 space-y-4">
                   <div className="flex items-baseline gap-4">
                     <span className="text-5xl md:text-6xl font-display font-bold text-secondary">
@@ -63,17 +68,17 @@ export const HowItWorks = () => {
                       {step.title}
                     </h3>
                   </div>
-                  
+
                   <p className="text-xl text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
-                  
+
                   {step.options && (
                     <div className="grid sm:grid-cols-2 gap-3 pt-4">
                       {step.options.map((option, idx) => (
-                        <div 
+                        <div
                           key={idx}
-                          className="bg-card p-4 rounded-xl border border-border/50 text-card-foreground hover:border-accent/50 transition-colors"
+                          className="bg-card p-4 rounded-xl border border-border/60 text-card-foreground hover:border-accent/50 transition-colors"
                         >
                           • {option}
                         </div>
@@ -82,9 +87,10 @@ export const HowItWorks = () => {
                   )}
                 </div>
               </div>
-              
+
+              {/* Linha de conexão entre os steps (apenas desktop) */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute left-10 top-20 bottom-0 w-0.5 bg-secondary/30 -z-10" />
+                <div className="hidden md:block absolute left-10 top-20 bottom-0 w-px bg-border/60 -z-10" />
               )}
             </div>
           ))}
@@ -93,3 +99,5 @@ export const HowItWorks = () => {
     </section>
   );
 };
+
+export default HowItWorks;

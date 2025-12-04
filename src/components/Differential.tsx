@@ -18,6 +18,8 @@ export const Differential = () => {
   return (
     <section className="py-24 px-6 bg-background text-foreground">
       <div className="container mx-auto max-w-6xl">
+        
+        {/* Título */}
         <div className="text-center space-y-8 mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
             O FLUIR não é mais um chatbot.
@@ -26,39 +28,54 @@ export const Differential = () => {
             É uma estrutura humana + tecnologia inteligente.
           </p>
         </div>
-        
+
+        {/* Blocos */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="space-y-4">
-            {notItems.map((item, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-4 p-4 bg-primary/5 backdrop-blur-sm rounded-xl border border-primary/10"
-              >
-                <X className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
-                <span className="text-lg">{item}</span>
-              </div>
-            ))}
+
+          {/* O que o FLUIR NÃO é */}
+          <div className="bg-primary text-primary-foreground rounded-2xl p-8 border border-[#4E4B45]/40 shadow-lg">
+            <div className="space-y-4">
+              {notItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-4 p-4 bg-[#02236B]/30 rounded-xl border border-[#A4B6C5]/30"
+                >
+                  <X className="h-6 w-6 text-[#A4B6C5] flex-shrink-0 mt-1" />
+                  <span className="text-lg">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          
-          <div className="space-y-4">
-            {yesItems.map((item, index) => (
-              <div 
-                key={index}
-                className="flex items-start gap-4 p-4 bg-accent/10 backdrop-blur-sm rounded-xl border border-accent/20"
-              >
-                <Check className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
-                <span className="text-lg">{item}</span>
-              </div>
-            ))}
+
+          {/* O que o FLUIR É */}
+          <div className="bg-primary text-primary-foreground rounded-2xl p-8 border border-[#4E4B45]/40 shadow-lg">
+            <div className="space-y-4">
+              {yesItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-4 p-4 bg-[#02236B]/30 rounded-xl border border-[#A4B6C5]/30"
+                >
+                  <Check className="h-6 w-6 text-[#A4B6C5] flex-shrink-0 mt-1" />
+                  <span className="text-lg">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
-        
+
+        {/* Texto final */}
         <div className="text-center space-y-6 pt-8 max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl lg:text-3xl font-display leading-relaxed">
-            O FLUIR transforma o seu WhatsApp em um atendimento ativo e inteligente, que acolhe, entende e direciona cada cliente — como se fosse você, mas de forma automatizada através de um Chatbot.
+            O FLUIR transforma o seu WhatsApp em um atendimento ativo e
+            inteligente, que acolhe, entende e direciona cada cliente — como se
+            fosse você, mas de forma automatizada através de um Chatbot.
           </p>
         </div>
+
       </div>
     </section>
   );
 };
+
+export default Differential;

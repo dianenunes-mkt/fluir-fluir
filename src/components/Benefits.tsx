@@ -12,25 +12,44 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-secondary/10 to-background">
+    <section className="py-24 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center space-y-6 mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground">
-            Benefícios Diretos
-          </h2>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={index}
-              className="flex items-start gap-4 p-6 bg-card rounded-2xl border border-border/50 hover:border-accent/50 transition-all hover:shadow-lg animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CheckCircle2 className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
-              <span className="text-lg md:text-xl text-card-foreground">{benefit}</span>
-            </div>
-          ))}
+
+        {/* Bloco principal */}
+        <div className="rounded-[2.5rem] bg-[#050C1A] text-[#F5F3ED] px-6 py-12 md:px-12 md:py-14 shadow-lg">
+
+          {/* Título */}
+          <div className="text-center space-y-6 mb-12 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
+              Benefícios Diretos
+            </h2>
+          </div>
+
+          {/* Lista */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="
+                  flex items-start gap-4 p-6
+                  bg-[#0B1739]              /* azul EXATO dos cards acima */
+                  text-[#F5F3ED]
+                  rounded-2xl border border-white/10
+                  transition-all hover:shadow-lg hover:border-white/20
+                  animate-slide-up
+                "
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CheckCircle2
+                  className="h-7 w-7 text-[#BFC5CC] flex-shrink-0 mt-1"
+                />
+                <span className="text-lg md:text-xl leading-relaxed">
+                  {benefit}
+                </span>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
