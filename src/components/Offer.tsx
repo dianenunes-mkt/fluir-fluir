@@ -43,17 +43,24 @@ export const Offer = () => {
         
         {/* Botão */}
         <div className="text-center animate-slide-up">
-          <Button 
-            size="lg"
-            className="text-[#F5F3ED] text-xl px-12 py-8 rounded-full transition-all hover:scale-105 shadow-2xl"
-            style={{
-              backgroundColor: "#050C1A",     // Azul Profundo
-              borderColor: "#050C1A",
-            }}
-          >
-            <Flame className="mr-2 h-6 w-6 text-[#F5F3ED]" />
-            Quero ativar o FLUIR agora
-          </Button>
+         <Button
+    asChild
+    size="lg"
+    className="text-[#F5F3ED] text-xl px-12 py-8 rounded-full transition-all hover:scale-105 shadow-2xl"
+    style={{
+      backgroundColor: "#050C1A", // Azul Profundo
+      borderColor: "#050C1A",
+    }}
+  >
+    <a
+      href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20FLUIR"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Flame className="mr-2 h-6 w-6 text-[#F5F3ED]" />
+      Quero ativar o FLUIR agora
+    </a>
+  </Button>
         </div>
       </div>
     </section>

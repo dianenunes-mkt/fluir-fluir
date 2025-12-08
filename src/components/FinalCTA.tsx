@@ -21,18 +21,26 @@ export const FinalCTA = () => {
 
           <div className="pt-10">
             <Button
-              size="lg"
-              className="
-                bg-secondary
-                text-primary
-                hover:bg-secondary/80
-                text-xl px-12 py-8 rounded-full
-                transition-all hover:scale-105 shadow-xl
-              "
-            >
-              <MessageSquare className="mr-2 h-6 w-6" />
-              Ativar FLUIR
-            </Button>
+  asChild
+  size="lg"
+  className="
+    bg-secondary
+    text-primary
+    hover:bg-secondary/80
+    text-xl px-12 py-8 rounded-full
+    transition-all hover:scale-105 shadow-xl
+  "
+>
+  <a
+    href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20FLUIR"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <MessageSquare className="mr-2 h-6 w-6" />
+    Ativar FLUIR
+  </a>
+</Button>
+
           </div>
 
         </div>

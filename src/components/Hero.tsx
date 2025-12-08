@@ -18,7 +18,16 @@ export const Hero = () => {
             <img
               src={logoFluir}
               alt="FLUIR Logo"
-              className="w-56 h-56 md:w-72 md:h-72 object-contain drop-shadow-lg"
+              className="
+  w-64 h-64 md:w-96 md:h-96
+  object-contain
+  drop-shadow-2xl
+  transition-transform duration-500
+  hover:scale-105
+"
+
+
+
             />
           </div>
 
@@ -53,7 +62,7 @@ export const Hero = () => {
                 <div className="w-[85%] mx-auto pt-2">
                   <VideoPlaceholder
                     title="Vídeo de apresentação do FLUIR"
-                    youtubeUrl="https://www.youtube.com/watch?v=lp-EO5I60KA"
+                    youtubeUrl="https://www.youtube.com/watch?v=ew-lqBSaY3k"
                     aspectRatio="video"
                   />
                 </div>
@@ -65,24 +74,39 @@ export const Hero = () => {
           {/* Botões */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
 
-            {/* Botão principal */}
-            <Button
-              size="lg"
-              className="bg-[#050C1A] hover:bg-[#02236B]/90 text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
-            >
-              <ArrowRight className="mr-2 h-5 w-5" />
-              Quero ativar o FLUIR
-            </Button>
+           <Button
+  asChild
+  size="lg"
+  className="bg-[#050C1A] hover:bg-[#02236B]/90 text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
+>
+  <a
+    href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20FLUIR"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <ArrowRight className="mr-2 h-5 w-5" />
+    Quero ativar o FLUIR
+  </a>
+</Button>
+
 
             {/* Botão outline */}
             <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-[#4E4B45] text-[#4E4B45] hover:bg-[#4E4B45] hover:text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
-            >
-              <Search className="mr-2 h-5 w-5" />
-              Entender como funciona
-            </Button>
+  asChild
+  variant="outline"
+  size="lg"
+  className="border-2 border-[#4E4B45] text-[#4E4B45] hover:bg-[#4E4B45] hover:text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
+>
+  <a
+    href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Gostaria%20de%20entender%20como%20funciona%20o%20FLUIR"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Search className="mr-2 h-5 w-5" />
+    Entender como funciona
+  </a>
+</Button>
+
 
           </div>
 
