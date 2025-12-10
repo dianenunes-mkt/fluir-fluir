@@ -38,7 +38,7 @@ export const Hero = () => {
 
           {/* Descrição */}
           <p className="text-lg md:text-xl text-[#F5F3ED]/80 max-w-3xl mx-auto leading-relaxed">
-            O sistema que centraliza, direciona e dá fluidez às suas conversas no WhatsApp —
+            O serviço que centraliza, direciona e dá fluidez às suas conversas no WhatsApp —
             para que nenhum lead seja perdido e seu atendimento funcione sem complicações.
           </p>
         </div>
@@ -62,7 +62,7 @@ export const Hero = () => {
                 <div className="w-[85%] mx-auto pt-2">
                   <VideoPlaceholder
                     title="Vídeo de apresentação do FLUIR"
-                    youtubeUrl="https://www.youtube.com/watch?v=ew-lqBSaY3k"
+                    youtubeUrl="https://www.youtube.com/watch?v=_JZatCnaXHo"
                     aspectRatio="video"
                   />
                 </div>

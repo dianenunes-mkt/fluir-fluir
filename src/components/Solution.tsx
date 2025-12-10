@@ -23,7 +23,7 @@ export const Solution = () => {
             </h2>
 
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed opacity-90">
-              O FLUIR é um sistema de fluxo inteligente que prepara e direciona
+              O FLUIR é um serviço de fluxo inteligente que prepara e direciona
               seus leads de forma segura, clara e profissional.
             </p>
           </div>
