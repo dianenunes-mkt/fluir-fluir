@@ -58,15 +58,15 @@ export const Hero = () => {
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-[#050C1A] rounded-full" />
 
               {/* Tela — agora usando o mesmo background do ESSENCIAL */}
-              <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden flex items-center justify-center">
-                <div className="w-[85%] mx-auto pt-2">
-                  <VideoPlaceholder
-                    title="Vídeo de apresentação do FLUIR"
-                    youtubeUrl="https://www.youtube.com/watch?v=_JZatCnaXHo"
-                    aspectRatio="video"
-                  />
-                </div>
-              </div>
+            <div className="absolute inset-2 bg-background rounded-[2.5rem] overflow-hidden">
+              <VideoPlaceholder
+                title="Vídeo de apresentação do FLUIR"
+                youtubeUrl="https://www.youtube.com/watch?v=_JZatCnaXHo"
+                mode="fill"
+                className="rounded-none shadow-none"
+              />
+            </div>
+
 
             </div>
           </div>

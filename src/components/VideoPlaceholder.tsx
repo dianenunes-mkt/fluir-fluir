@@ -4,19 +4,27 @@ interface VideoPlaceholderProps {
   title: string;
   youtubeUrl?: string;
   aspectRatio?: "video" | "square";
+  mode?: "aspect" | "fill";   // ✅ NOVO: fill ocupa 100% do pai
+  className?: string;         // ✅ NOVO: ajustar no local (ex: rounded-none)
 }
 
 // Converte URL normal do YouTube para formato embed
+// Aceita:
+// - https://www.youtube.com/watch?v=ID
+// - https://youtu.be/ID
+// - https://www.youtube.com/embed/ID
 const getYoutubeEmbedUrl = (url: string) => {
   try {
     const parsed = new URL(url);
-    const v = parsed.searchParams.get("v");
 
-    if (v) {
-      return `https://www.youtube.com/embed/${v}`;
+    const v = parsed.searchParams.get("v");
+    if (v) return `https://www.youtube.com/embed/${v}`;
+
+    if (parsed.hostname.includes("youtu.be")) {
+      const id = parsed.pathname.replace("/", "");
+      if (id) return `https://www.youtube.com/embed/${id}`;
     }
 
-    // Se já vier em outro formato (embed etc.), usa direto
     return url;
   } catch {
     return url;
@@ -27,15 +35,22 @@ export const VideoPlaceholder = ({
   title,
   youtubeUrl,
   aspectRatio = "video",
+  mode = "aspect",
+  className = "",
 }: VideoPlaceholderProps) => {
   const hasVideo = !!youtubeUrl;
   const embedUrl = youtubeUrl ? getYoutubeEmbedUrl(youtubeUrl) : "";
 
+  const aspectClass =
+    aspectRatio === "video" ? "aspect-video" : "aspect-square";
+
   return (
     <div
-      className={`relative w-full ${
-        aspectRatio === "video" ? "aspect-video" : "aspect-square"
-      } bg-muted rounded-lg overflow-hidden shadow-elegant group`}
+      className={[
+        "relative w-full bg-muted rounded-lg overflow-hidden shadow-elegant group",
+        mode === "aspect" ? aspectClass : "h-full", // ✅ fill = ocupa altura do pai
+        className,
+      ].join(" ")}
     >
       {hasVideo ? (
         <iframe
