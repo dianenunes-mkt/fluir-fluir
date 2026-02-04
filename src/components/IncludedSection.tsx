@@ -11,7 +11,7 @@ export default function IncludedSection() {
 
           {/* CARD 1 */}
           <div className="bg-white p-8 rounded-[26px] shadow-sm border border-[#E2DED4]">
-            <h3 className="font-semibold mb-4">
+            <h3 className="font-semibold mb-4 text-[24px] text-center">
               🔹 FLUIR – Gestão de Fluxos Humanizados de Atendimento
             </h3>
             <p className="mb-3">
@@ -27,7 +27,7 @@ export default function IncludedSection() {
 
           {/* CARD 2 */}
           <div className="bg-white p-8 rounded-[26px] shadow-sm border border-[#E2DED4]">
-            <h3 className="font-semibold mb-4">
+            <h3 className="font-semibold mb-4 text-[24px] text-center">
               🔹 FLUIR – Organização Básica de Funil de Vendas (CRM)
             </h3>
             <p className="mb-3">
@@ -43,7 +43,7 @@ export default function IncludedSection() {
 
           {/* CARD 3 */}
           <div className="bg-white p-8 rounded-[26px] shadow-sm border border-[#E2DED4]">
-            <h3 className="font-semibold mb-4">
+            <h3 className="font-semibold mb-4 text-[24px] text-center ">
               🔹 FLUIR – Gestão Simplificada de Tráfego Pago (Meta Ads)
             </h3>
             <p className="mb-3">
@@ -59,7 +59,7 @@ export default function IncludedSection() {
 
           {/* CARD 4 */}
           <div className="bg-white p-8 rounded-[26px] shadow-sm border border-[#E2DED4]">
-            <h3 className="font-semibold mb-4">
+            <h3 className="font-semibold mb-4 text-[24px] text-center">
               🔹 FLUIR – Gestão Simplificada de Tráfego Pago (Google Ads)
             </h3>
             <p className="mb-3">

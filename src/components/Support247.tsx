@@ -40,21 +40,25 @@ export const Support247 = () => {
             </p>
 
             {/* Lista */}
-            <div className="space-y-4">
+            
+            <div className="space-y-4 text-left">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl border border-primary/10"
+                  className="flex items-start gap-4 p-4 bg-card rounded-xl border border-primary/10"
                 >
-                  {/* Ícones da lista agora em Azul Profundo */}
                   <feature.icon
-                    className="h-6 w-6 flex-shrink-0"
+                    className="h-6 w-6 flex-shrink-0 mt-1"
                     style={{ color: "#050C1A" }}
                   />
-                  <span className="text-lg md:text-xl">{feature.text}</span>
+
+                  <span className="text-lg md:text-xl leading-relaxed flex-1 text-left">
+                    {feature.text}
+                  </span>
                 </div>
               ))}
             </div>
+
 
           </div>
 
