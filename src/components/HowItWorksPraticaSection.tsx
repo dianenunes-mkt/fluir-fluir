@@ -9,14 +9,31 @@ export default function HowItWorksPraticaSection() {
           Como funciona na prática
         </h2>
 
-        <div className="space-y-6 text-lg md:text-xl font-semibold">
-          <p>Você agenda uma apresentação do FLUIR</p>
-          <p>Entendemos rapidamente o seu tipo de negócio</p>
-          <p>Definimos o escopo essencial para você</p>
-          <p>Implementamos e acompanhamos</p>
-        </div>
+        <div className="space-y-5 text-lg md:text-xl font-semibold max-w-2xl mx-auto">
+  {[
+    "Você agenda uma apresentação do FLUIR",
+    "Entendemos rapidamente o seu tipo de negócio",
+    "Definimos o escopo essencial para você",
+    "Implementamos e acompanhamos",
+  ].map((text, i) => (
+    <div key={i} className="flex items-start gap-4">
+      
+      {/* Número */}
+      <div className="flex items-center justify-center w-7 h-7 rounded-md bg-blue-500 text-white text-sm font-bold flex-shrink-0 mt-1">
+        {i + 1}
+      </div>
 
-        {/* Botão 1 */}
+      {/* Texto */}
+      <p className="leading-relaxed text-left">
+        {text}
+      </p>
+
+    </div>
+  ))}
+</div>
+
+
+        {/* Botão 1 
         <div className="mt-10">
           <Button
             asChild
@@ -41,7 +58,7 @@ export default function HowItWorksPraticaSection() {
               👉 VER SE O FLUIR FAZ SENTIDO PARA MIM
             </a>
           </Button>
-        </div>
+        </div>*/}
 
         <p className="mt-16 text-lg md:text-xl font-semibold">
           Quer ver se o FLUIR faz sentido para o seu negócio?
