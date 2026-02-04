@@ -48,31 +48,23 @@ export const Hero = () => {
 
           <Button
             asChild
-            variant="outline"
             className="
+              bg-[#4E4B45] hover:bg-[#4E4B45]/90 text-white
+              rounded-2xl
+              px-6 py-6 sm:px-10
+              h-auto
               w-full sm:w-auto
-              h-auto          /* <- IMPORTANTE: remove altura fixa do size */
-              whitespace-normal
-              break-words
-              text-center
-              leading-snug
-
-              border-2 border-[#4E4B45]
-              text-[#4E4B45]
-              hover:bg-[#4E4B45] hover:text-white
-
-              rounded-full
-              transition-all
-              px-5 py-4 sm:px-8 sm:py-6
               text-base sm:text-lg
-              hover:scale-[1.02]
+              whitespace-normal
+              leading-snug
+              shadow-md
             "
           >
             <a
-              href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Gostaria%20de%20entender%20como%20funciona%20o%20FLUIR"
+              href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Quero%20agendar%20uma%20apresenta%C3%A7%C3%A3o%20r%C3%A1pida%20do%20FLUIR%20(15%20min)."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center"
+              className="inline-flex items-center justify-center w-full"
             >
               👉 QUERO ENTENDER COMO ISSO FUNCIONA NO MEU NEGÓCIO
             </a>
