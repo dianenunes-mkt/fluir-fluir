@@ -20,7 +20,7 @@ export const Support247 = () => {
           <div className="flex justify-center mb-4">
             <div className="bg-accent/10 p-6 rounded-full">
               {/* Ícone principal agora em azul profundo */}
-              <Moon className="h-16 w-16" style={{ color: "#050C1A" }} />
+              <Moon className="h-20 w-20" style={{ color: "#050C1A" }} />
             </div>
           </div>
 
@@ -33,7 +33,7 @@ export const Support247 = () => {
           </p>
 
           {/* Bloco principal */}
-          <div className="bg-primary/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-4xl mx-auto border border-primary/10">
+          <div className="bg-primary/5 backdrop-blur-sm rounded-3xl p-6 md:p-10 max-w-4xl mx-auto border border-primary/10">
             
             <p className="text-xl md:text-2xl mb-8 leading-relaxed">
               Enquanto você dorme, está em reunião ou atendendo um cliente, o FLUIR:
@@ -45,10 +45,10 @@ export const Support247 = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-4 bg-card rounded-xl border border-primary/10"
+                  className="flex items-start gap-3 p-3 bg-card rounded-xl border border-primary/10"
                 >
                   <feature.icon
-                    className="h-6 w-6 flex-shrink-0 mt-1"
+                    className="h-4 w-4 flex-shrink-0 mt-1"
                     style={{ color: "#050C1A" }}
                   />
 
@@ -63,7 +63,7 @@ export const Support247 = () => {
           </div>
 
           {/* Texto final */}
-          <div className="pt-8 max-w-3xl mx-auto">
+          <div className="pt-8 max-w-2xl mx-auto">
             <p className="text-2xl md:text-3xl font-display font-semibold leading-relaxed">
               É como ter um assistente digital que substitui ou reduz a necessidade de um SDR — que
               nunca atrasa, nunca esquece e nunca para.

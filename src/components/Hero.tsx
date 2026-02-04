@@ -61,7 +61,7 @@ export const Hero = () => {
             "
           >
             <a
-              href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Quero%20agendar%20uma%20apresenta%C3%A7%C3%A3o%20r%C3%A1pida%20do%20FLUIR%20(15%20min)."
+              href="https://api.whatsapp.com/send?phone=555196706118&text=Ol%C3%A1!%20Quero%20agendar%20uma%20apresenta%C3%A7%C3%A3o%20r%C3%A1pida%20do%20FLUIR%20"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-full"
