@@ -61,7 +61,8 @@ export const Support247 = () => {
           {/* Texto final */}
           <div className="pt-8 max-w-3xl mx-auto">
             <p className="text-2xl md:text-3xl font-display font-semibold leading-relaxed">
-              É como ter um assistente digital que nunca atrasa, nunca esquece e nunca para.
+              É como ter um assistente digital que substitui ou reduz a necessidade de um SDR — que
+              nunca atrasa, nunca esquece e nunca para.
             </p>
           </div>
 
